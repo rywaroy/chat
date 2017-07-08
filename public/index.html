@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="content-language" content="zh-CN" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="x5-fullscreen" content="true">
+    <meta name="full-screen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="keywords" content="情感聊天室" />
+    <meta name="description" content="情感聊天室" />
+    <meta name="author" content="张志豪"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>情感聊天室</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/dists.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+  </head>
+  <body>
+    <div class="index" id="index">
+      <input type="text" placeholder="请输入你的姓名" class="index-input" v-model="name">
+      <div class="index-tip">用于抽奖，不作聊天昵称</div>
+      <div class="login" @click="sub()">提交</div>
+      <div class="index-avatar f-x">
+        <div class="index-avatar-box" :style="{backgroundImage:'url('+url+')'}"></div>
+        <select v-model="img" class="index-avatar-select">
+          <option value="1">牛</option>
+          <option value="2">狐狸</option>
+          <option value="3">猴子</option>
+          <option value="4">熊猫</option>
+          <option value="5">企鹅</option>
+        </select>
+      </div>
+      <input type="text" placeholder="请输入你的昵称" class="index-input" v-model="nickname">
+      <div class="index-tip">昵称非必填，不填默认显示为聊天id</div>
+      <div class="login" @click="login()">进入聊天室</div>
+      <div class="index-tip red">
+        聊天记录将保存到数据库(如果它不崩的话) <br>
+        下拉即可加载以往聊天记录 <br>
+        <!-- 但是问题来了 <br>你们不登录我怎么抽13名幸运观众？<br>好头疼 -->
+      </div>
+    </div>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>

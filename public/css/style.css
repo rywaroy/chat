@@ -1,0 +1,201 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  background: #f7f7f7;
+}
+.f-x {
+    zoom: 1;
+}
+
+.f-x:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+.message-reply-ul{
+    padding: .7rem .26rem 0.2rem;
+}
+.message-reply-avatar{
+    width: .8rem;
+    height: .8rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.message-reply-li{
+    margin-bottom: .6rem;
+}
+.message-reply-li.others .message-reply-avatar{
+    float: left;
+    margin-right: .27rem;
+}
+.message-reply-li.me .message-reply-avatar{
+    float: right;
+    margin-left: .27rem;
+}
+.message-reply-content{
+    max-width: 4.85rem;
+    font-size: .34rem;
+    line-height:.48rem;
+    padding: .15rem .2rem;
+    border-radius: .2rem;
+    position: relative;
+    margin-top: .1rem
+}
+.message-reply-li.others .message-reply-content{
+    float: left;
+    background: #fff;
+    color: #333;
+}
+.message-reply-li.others .message-reply-box,
+.message-reply-li.others .message-reply-name{
+  float: left;
+}
+.message-reply-li.me .message-reply-content{
+    float: right;
+    background: #40a3ff;
+    color: #fff;
+}
+.message-reply-li.me .message-reply-box,
+.message-reply-li.me .message-reply-name{
+  float: right;
+}
+.message-reply-name{
+  font-size: .3rem;
+  line-height: 1;
+}
+.message-reply-angle{
+    position: absolute;
+    top:0;
+    width: .27rem;
+    height: .25rem;
+}
+.message-reply-li.others .message-reply-angle{
+    background: url("../img/message_other_angle.png") no-repeat;
+    background-size: contain;
+    left:-.08rem;
+}
+.message-reply-li.me .message-reply-angle{
+    background: url("../img/message_me_angle.png") no-repeat;
+    background-size: contain;
+    right:-.08rem;
+}
+.circle-publish {
+    width: 100%;
+    height: .98rem;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    background: #fff;
+}
+.circle-publish.move{
+  bottom: 1.5rem;
+}
+.circle-publish-input {
+    float: left;
+    width: 6.4rem;
+    background: url(../img/circle_input.png) no-repeat .52rem .34rem;
+    background-size: .3rem .3rem;
+    height: .98rem;
+    border: 0;
+    border-top: 1px solid #f1f1f1;
+    font-size: .3rem;
+    color: #b5b5b5;
+    line-height: .5rem;
+    padding: .24rem 0 .24rem .95rem;
+}
+.circle-publish-btn {
+    float: left;
+    width: 1.1rem;
+    height: .98rem;
+    background: url(../img/circle_publish.jpg) no-repeat;
+    background-size: contain;
+}
+.scroll-body{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0.98rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.index{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+.login{
+  font-size: .3rem;
+  width: 3rem;
+  height: .7rem;
+  background: #00a3f0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: .1rem;
+  margin-top: .5rem ;
+}
+.index-input{
+  width: 6.4rem;
+  height: .88rem;
+  border: 1px solid #eee;
+  border-radius: .04rem;
+  font-size: .3rem;
+  text-align: center;
+}
+.oppo {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+    padding: 0.28rem 0.1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 0.3rem;
+    line-height: 0.44rem;
+    text-align: center;
+    color: #fff;
+    z-index: 999999;
+}
+.index-tip{
+  font-size: .3rem;
+  line-height: 1.3;
+  margin-top: .2rem;
+}
+.index-tip.red{
+  color: red;
+}
+.index-avatar-box{
+  width: 2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.index-avatar{
+  display: flex;
+  margin-bottom: .2rem;
+  margin-top: .2rem;
+}
+.index-avatar-select{
+  height : .88rem;
+  width: 2rem;
+  font-size: .3rem;
+  line-height: 1;
+  text-align: right;
+  margin-left: .2rem;
+  border: 1px solid #eee;
+  border-radius: .04rem;
+  appearance:normal
+}
